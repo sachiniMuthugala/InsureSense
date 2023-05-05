@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<head>
+	<title>Health Risk Prediction System for Life Insurance Companies</title>
+</head>
+<body>
+	<h1>Health Risk Prediction System for Life Insurance Companies</h1>
+	<img src="{{ url_for('static', filename='HI.png') }}" alt="--" class="center">
+	<style>
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 25%;
+		}
+	</style>
+	<form action="/predict" method="POST">
+		<label for="bmi">BMI:</label>
+		<input type="number" step="0.01" name="bmi" id="bmi" required><br>
+
+		<label for="smoking">Smoking:</label>
+		<select name="smoking" id="smoking" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+
+		<label for="alcohol">Alcohol Drinking:</label>
+		<select name="alcohol" id="alcohol" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+
+		<label for="sex">Sex:</label>
+		<select name="sex" id="sex" required>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select><br>
+
+		<label for="age">Age Category:</label>
+		<select name="age" id="age" required>
+			<option value="0-4">0-4</option>
+			<option value="5-9">5-9</option>
+			<option value="10-14">10-14</option>
+			<option value="15-29">15-29</option>
+			<option value="30-34">30-34</option>
+			<option value="35-39">35-39</option>
+			<option value="40-44">40-44</option>
+			<option value="45-49">45-49</option>
+			<option value="50-54">50-54</option>
+			<option value="55-59">55-59</option>
+			<option value="60-64">60-64</option>
+			<option value="65-69">65-69</option>
+			<option value="70-74">70-74</option>
+			<option value="75-79">75-79</option>
+			<option value="80 or older">80 or older</option>
+		</select><br>
+		
+		
+		<label for="sleep_time">Sleep Time:</label>
+		<input type="number" name="sleep_time" id="sleep_time" required><br>
+		
+		
+		<input type="submit" value="Predict">
+	</form>
+</body>
+</html>

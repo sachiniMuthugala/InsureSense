@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<head>
+	<title>Health Risk Prediction System for Life Insurance Companies</title>
+</head>
+<body>
+	<h1>Family History</h1>
+	<img src="HI.png" alt="HI" class="center">
+	<style>
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 25%;
+		}
+	</style>
+	<form action="/predict" method="POST">
+		<label for="familyDiabetes">Family Diabetes History:</label>
+		<select name="familyDiabetes" id="familyDiabetes" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+		
+		<label for="familyAsthma">Family Asthma History:</label>
+		<select name="familyAsthma" id="familyAsthma" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+		
+		<label for="familyKidney">Family Kidney Failure History:</label>
+		<select name="familyKidney" id="familyKidney" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+		
+		
+		<label for="familyHeartDisease">Family Heart Disease History:</label>
+		<select name="familyHeartDisease" id="familyHeartDisease" required>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select><br>
+		
+		
+		<label for="bloodSugerLevel">Fasting Blood Sugar:</label>
+		<input type="number" step="1" name="bmi" id="bmi" required><br>
+		
+		
+		<input type="submit" value="Predict">
+	</form>
+</body>
+</html>

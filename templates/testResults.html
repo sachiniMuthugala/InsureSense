@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<head>
+	<title>Health Risk Prediction System for Life Insurance Companies</title>
+</head>
+<body>
+	<h1>Test Results</h1>
+	<img src="HI.png" alt="HI" class="center">
+	<style>
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 25%;
+		}
+	</style>
+	<form action="/predict" method="POST">
+		<label for="bloodSugerLevel">Fasting Blood Sugar:</label>
+		<input type="number" step="1" name="bmi" id="bmi" required><br>
+		
+		
+		<label for="restingBloodPressure">Resting Blood Pressure:</label>
+		<input type="number" step="1" name="restingBloodPressure" id="restingBloodPressure" required><br>
+		
+		
+		<label for="serumCholestoral">Serum Cholestoral in mg/dl:</label>
+		<input type="number" step="1" name="serumCholestoral" id="serumCholestoral" required><br>
+		
+		
+		
+		<label for="restingElectrocardiographicResults">Resting Electrocardiographic Results:</label>
+		<select name="restingElectrocardiographicResults" id="restingElectrocardiographicResults" required>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+		</select><br>
+		
+		
+		<label for="maximumHeartRateAchieved">Maximum Heart Rate Achieved:</label>
+		<input type="number" step="1" name="maximumHeartRateAchieved" id="maximumHeartRateAchieved" required><br>
+		
+		
+		<label for="exerciseInducedAngina">Exercise Induced Angina:</label>
+		<input type="number" step="1" name="exerciseInducedAngina" id="exerciseInducedAngina" required><br>
+		
+		
+		<input type="submit" value="Predict">
+	</form>
+</body>
+</html>
